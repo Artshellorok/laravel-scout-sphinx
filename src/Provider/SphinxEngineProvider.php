@@ -20,10 +20,5 @@ class SphinxEngineProvider extends Provider
             return new EngineManager($app);
         });
 
-        if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__ . '/../../config/scout.php' => config_path('scout.php'),
-            ]);
-        }
     }
 }
